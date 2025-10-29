@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: "./",
   css: {
-    lightningcss: false, // ⚡ nonaktifkan lightningcss biar aman di Vercel
+    lightningcss: false,
   },
   build: {
     rollupOptions: {
@@ -15,5 +15,11 @@ export default defineConfig({
   },
   optimizeDeps: {
     exclude: ["vite/modulepreload-polyfill"],
+  },
+  // Tambahan ini penting untuk Vercel (Linux)
+  resolve: {
+    alias: {
+      rollup: "rollup/dist/es/shared/node-entry.js",
+    },
   },
 });
