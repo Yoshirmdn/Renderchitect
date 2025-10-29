@@ -5,6 +5,9 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: "./",
+  css: {
+    lightningcss: false, // ⚡ nonaktifkan lightningcss biar aman di Vercel
+  },
   build: {
     rollupOptions: {
       external: ["vite/modulepreload-polyfill"],
