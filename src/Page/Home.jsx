@@ -20,6 +20,7 @@ import {
   Cpu,
 } from "lucide-react";
 import Navbar from "../Components/Navbar";
+import HouseRenderchitect from "../assets/icon/HouseRenderchitect.png";
 
 export default function HomePage({ auth }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -460,7 +461,7 @@ export default function HomePage({ auth }) {
                 <div className="flex items-center space-x-2 mb-4">
                   <div className="relative group">
                     <img
-                      src="/icon/HouseRenderchitect.png"
+                      src={HouseRenderchitect}
                       alt="Logo"
                       className="w-11 h-11 object-contain transform group-hover:scale-110 transition-transform"
                     />
