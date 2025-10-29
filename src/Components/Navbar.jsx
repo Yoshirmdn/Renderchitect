@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Home, Play, Package, Sparkles, Menu, X } from "lucide-react";
 import logo from "../assets/icon/HouseRenderchitect.png";
-
 export default function Navbar({ auth }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
