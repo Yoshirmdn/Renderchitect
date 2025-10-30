@@ -74,7 +74,7 @@ export default function HomePage({ auth }) {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href={auth?.user ? "/dashboard" : "/register"}
+                  href={auth?.user ? "/demo" : "/demo"}
                   className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold overflow-hidden transform hover:scale-105 transition-all duration-300"
                 >
                   <span className="relative z-10 flex items-center justify-center">
@@ -413,7 +413,7 @@ export default function HomePage({ auth }) {
               {/* CTA Buttons with enhanced effects */}
               <div className="flex flex-col sm:flex-row gap-5 justify-center pt-8">
                 <a
-                  href={auth?.user ? "/dashboard" : "/register"}
+                  href={auth?.user ? "/demo" : "/demo"}
                   className="group relative px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl font-bold text-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300"
                 >
                   <span className="relative z-10 flex items-center justify-center gap-3">

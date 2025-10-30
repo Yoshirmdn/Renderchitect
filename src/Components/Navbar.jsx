@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Home, Play, Package, Sparkles, Menu, X } from "lucide-react";
 // import HouseRenderchitect from "../assets/icon/HouseRenderchitect.png";
-export default function Navbar({ auth }) {
+export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -55,7 +55,7 @@ export default function Navbar({ auth }) {
           </div>
 
           {/* Auth Buttons */}
-          <div className="hidden md:flex items-center space-x-3">
+          {/* <div className="hidden md:flex items-center space-x-3">
             {auth?.user ? (
               <a
                 href="/dashboard"
@@ -81,7 +81,7 @@ export default function Navbar({ auth }) {
                 </a>
               </>
             )}
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button
@@ -122,7 +122,7 @@ export default function Navbar({ auth }) {
               <Package className="w-4 h-4" />
               <span>Check Order</span>
             </a>
-            {auth?.user ? (
+            {/* {auth?.user ? (
               <a
                 href="/dashboard"
                 className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg font-medium text-center"
@@ -144,7 +144,7 @@ export default function Navbar({ auth }) {
                   Get Started
                 </a>
               </>
-            )}
+            )} */}
           </div>
         </div>
       </div>
