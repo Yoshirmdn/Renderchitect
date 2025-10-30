@@ -62,7 +62,7 @@ export default function HomePage({ auth }) {
                 <span className="text-gray-900">Transform Your</span>
                 <br />
                 <span className="inline-block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent animate-gradient-x">
-                  3D Vision
+                  Immersive Space
                 </span>
               </h1>
 
