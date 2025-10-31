@@ -248,21 +248,11 @@ export default function DemoPage() {
                   />
                   <div className="border-4 border-dashed border-gray-300 rounded-2xl p-12 hover:border-blue-400 hover:bg-blue-50 transition-all duration-300 text-center group">
                     <div className="w-32 h-32 mx-auto mb-4 bg-gray-100 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <svg
-                        className="w-16 h-16 text-gray-400"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"
-                        />
-                        <polyline points="17 21 17 13 7 13 7 21" />
-                        <polyline points="7 3 7 8 15 8" />
-                      </svg>
+                      <img
+                        src="HouseRenderchitect.png"
+                        alt="SketchUp Icon"
+                        className="w-32 h-32 object-contain"
+                      />
                     </div>
                     <div className="text-gray-600 font-medium mb-2">
                       Upload Design
