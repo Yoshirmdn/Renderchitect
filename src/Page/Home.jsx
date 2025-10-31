@@ -20,6 +20,7 @@ import {
   Cpu,
 } from "lucide-react";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 export default function HomePage({ auth }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -49,8 +50,9 @@ export default function HomePage({ auth }) {
         <Navbar auth={auth} />
 
         {/* Hero Section */}
-        <section className="container mx-auto px-6 pt-20 pb-32 relative">
+        <section className="container mx-auto px-6 pb-32 relative">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Content */}
             <div className="space-y-8 animate-fade-in-up">
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-full text-blue-700 text-sm font-semibold backdrop-blur-sm">
                 <div className="w-2 h-2 bg-blue-600 rounded-full animate-ping"></div>
@@ -117,76 +119,88 @@ export default function HomePage({ auth }) {
               </div>
             </div>
 
-            {/* 3D Mockup */}
-            <div
-              className="relative animate-fade-in-up"
-              style={{ animationDelay: "200ms" }}
-            >
-              <div className="relative group perspective-1000">
-                {/* Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-3xl blur-3xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+            {/* Right Content - Logo & Mockup */}
+            <div className="relative flex flex-col items-center">
+              {/* Logo di atas dengan posisi absolut */}
+              <div className="relative z-20 -mb-24 animate-fade-in-up">
+                <img
+                  src="LogoMrechilirisasi.png"
+                  alt="Renderchitect Logo"
+                  className="w-80 h-80 object-contain transform hover:scale-110 transition-transform duration-300 drop-shadow-2xl"
+                />
+              </div>
 
-                {/* Main Card */}
-                <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 shadow-2xl border border-gray-200 transform transition-all duration-500 group-hover:rotate-y-2">
-                  {/* Window Frame */}
-                  <div className="bg-white rounded-2xl p-6 shadow-xl">
-                    {/* Traffic Lights */}
-                    <div className="flex items-center space-x-2 mb-6">
-                      <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                      <div
-                        className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse"
-                        style={{
-                          animationDelay: "200ms",
-                        }}
-                      ></div>
-                      <div
-                        className="w-3 h-3 bg-green-500 rounded-full animate-pulse"
-                        style={{
-                          animationDelay: "400ms",
-                        }}
-                      ></div>
-                    </div>
+              {/* 3D Mockup */}
+              <div
+                className="relative animate-fade-in-up pt-8 w-full"
+                style={{ animationDelay: "200ms" }}
+              >
+                <div className="relative group perspective-1000">
+                  {/* Glow Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-3xl blur-3xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
 
-                    {/* Content */}
-                    <div className="space-y-4">
-                      <div className="h-3 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full w-3/4 animate-shimmer"></div>
-                      <div
-                        className="h-3 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full w-full animate-shimmer"
-                        style={{
-                          animationDelay: "200ms",
-                        }}
-                      ></div>
-                      <div
-                        className="h-3 bg-gradient-to-r from-blue-200 to-indigo-200 rounded-full w-5/6 animate-shimmer"
-                        style={{
-                          animationDelay: "400ms",
-                        }}
-                      ></div>
-
-                      {/* 3D Preview Box */}
-                      <div className="relative h-48 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-xl overflow-hidden">
-                        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.5)_50%,transparent_75%)] bg-[length:250%_250%] animate-shine"></div>
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <Box className="w-20 h-20 text-blue-400 animate-float-slow" />
-                        </div>
-                        {/* Corner Grid */}
-                        <div className="absolute inset-0 opacity-20">
-                          <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-blue-400"></div>
-                          <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-blue-400"></div>
-                          <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-blue-400"></div>
-                          <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-blue-400"></div>
-                        </div>
+                  {/* Main Card */}
+                  <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 shadow-2xl border border-gray-200 transform transition-all duration-500 hover:scale-[1.02]">
+                    {/* Window Frame */}
+                    <div className="bg-white rounded-2xl p-6 shadow-xl">
+                      {/* Traffic Lights */}
+                      <div className="flex items-center space-x-2 mb-6">
+                        <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                        <div
+                          className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse"
+                          style={{
+                            animationDelay: "200ms",
+                          }}
+                        ></div>
+                        <div
+                          className="w-3 h-3 bg-green-500 rounded-full animate-pulse"
+                          style={{
+                            animationDelay: "400ms",
+                          }}
+                        ></div>
                       </div>
 
-                      <div className="h-3 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full w-2/3 animate-shimmer"></div>
+                      {/* Content */}
+                      <div className="space-y-4">
+                        <div className="h-3 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full w-3/4 animate-shimmer"></div>
+                        <div
+                          className="h-3 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full w-full animate-shimmer"
+                          style={{
+                            animationDelay: "200ms",
+                          }}
+                        ></div>
+                        <div
+                          className="h-3 bg-gradient-to-r from-blue-200 to-indigo-200 rounded-full w-5/6 animate-shimmer"
+                          style={{
+                            animationDelay: "400ms",
+                          }}
+                        ></div>
+
+                        {/* 3D Preview Box */}
+                        <div className="relative h-48 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-xl overflow-hidden">
+                          <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.5)_50%,transparent_75%)] bg-[length:250%_250%] animate-shine"></div>
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <Box className="w-20 h-20 text-blue-400 animate-float-slow" />
+                          </div>
+                          {/* Corner Grid */}
+                          <div className="absolute inset-0 opacity-20">
+                            <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-blue-400"></div>
+                            <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-blue-400"></div>
+                            <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-blue-400"></div>
+                            <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-blue-400"></div>
+                          </div>
+                        </div>
+
+                        <div className="h-3 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full w-2/3 animate-shimmer"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Floating Elements */}
-              <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-3xl opacity-20 blur-2xl animate-float-medium"></div>
-              <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-gradient-to-br from-purple-400 to-pink-400 rounded-3xl opacity-20 blur-2xl animate-float-slow"></div>
+                {/* Floating Elements */}
+                <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-3xl opacity-20 blur-2xl animate-float-medium"></div>
+                <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-gradient-to-br from-purple-400 to-pink-400 rounded-3xl opacity-20 blur-2xl animate-float-slow"></div>
+              </div>
             </div>
           </div>
 
@@ -452,241 +466,119 @@ export default function HomePage({ auth }) {
             </div>
           </div>
         </section>
-        {/* Footer */}
-        <footer className="bg-white border-t border-gray-200 text-gray-600 py-16">
-          <div className="container mx-auto px-6">
-            <div className="grid md:grid-cols-4 gap-12 mb-12">
-              <div>
-                <div className="flex items-center space-x-2 mb-4">
-                  <span className="text-xl font-bold text-gray-900">
-                    Renderchitect
-                  </span>
-                </div>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  Professional 3D model conversion platform trusted by industry
-                  leaders worldwide.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-gray-900 font-bold mb-4">Product</h4>
-                <ul className="space-y-2 text-sm">
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-blue-600 transition-colors"
-                    >
-                      Features
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-blue-600 transition-colors"
-                    >
-                      Pricing
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-blue-600 transition-colors"
-                    >
-                      API
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-gray-900 font-bold mb-4">Company</h4>
-                <ul className="space-y-2 text-sm">
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-blue-600 transition-colors"
-                    >
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-blue-600 transition-colors"
-                    >
-                      Blog
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-blue-600 transition-colors"
-                    >
-                      Careers
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-gray-900 font-bold mb-4">Support</h4>
-                <ul className="space-y-2 text-sm">
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-blue-600 transition-colors"
-                    >
-                      Help Center
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-blue-600 transition-colors"
-                    >
-                      Documentation
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-blue-600 transition-colors"
-                    >
-                      Contact
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-t border-gray-200 pt-8">
-              <div className="flex flex-col md:flex-row items-center justify-between">
-                <div className="text-sm text-gray-500 mb-4 md:mb-0">
-                  © 2025 Renderchitect. All rights reserved.
-                </div>
-                <div className="flex space-x-6 text-sm">
-                  <a href="#" className="hover:text-blue-600 transition-colors">
-                    Privacy Policy
-                  </a>
-                  <a href="#" className="hover:text-blue-600 transition-colors">
-                    Terms of Service
-                  </a>
-                  <a href="#" className="hover:text-blue-600 transition-colors">
-                    Cookie Policy
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
 
       <style>{`
-                @keyframes float-orb {
-                    0%, 100% { transform: translate(0, 0) scale(1); }
-                    33% { transform: translate(30px, -30px) scale(1.1); }
-                    66% { transform: translate(-30px, 30px) scale(0.9); }
-                }
-                
-                @keyframes float-orb-delayed {
-                    0%, 100% { transform: translate(0, 0) scale(1); }
-                    33% { transform: translate(-30px, 30px) scale(1.1); }
-                    66% { transform: translate(30px, -30px) scale(0.9); }
-                }
+        @keyframes float-orb {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(30px, -30px) scale(1.1); }
+          66% { transform: translate(-30px, 30px) scale(0.9); }
+        }
+        
+        @keyframes float-orb-delayed {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(-30px, 30px) scale(1.1); }
+          66% { transform: translate(30px, -30px) scale(0.9); }
+        }
 
-                @keyframes float-slow {
-                    0%, 100% { transform: translateY(0px) rotate(0deg); }
-                    50% { transform: translateY(-20px) rotate(5deg); }
-                }
-                
-                @keyframes float-medium {
-                    0%, 100% { transform: translateY(0px); }
-                    50% { transform: translateY(-15px); }
-                }
+        @keyframes float-slow {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        @keyframes float-medium {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-15px); }
+        }
 
-                @keyframes shimmer {
-                    0% { background-position: -100% 0; }
-                    100% { background-position: 200% 0; }
-                }
+        @keyframes shimmer {
+          0% { background-position: -100% 0; }
+          100% { background-position: 200% 0; }
+        }
 
-                @keyframes shine {
-                    from { transform: translateX(-100%); }
-                    to { transform: translateX(100%); }
-                }
+        @keyframes shine {
+          from { transform: translateX(-100%); }
+          to { transform: translateX(100%); }
+        }
 
-                @keyframes fade-in-up {
-                    from {
-                        opacity: 0;
-                        transform: translateY(30px);
-                    }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
 
-                @keyframes gradient-x {
-                    0%, 100% { background-position: 0% 50%; }
-                    50% { background-position: 100% 50%; }
-                }
+        @keyframes gradient-x {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
 
-                @keyframes scroll {
-                    0% { transform: translateY(0); opacity: 0; }
-                    50% { opacity: 1; }
-                    100% { transform: translateY(12px); opacity: 0; }
-                }
+        @keyframes scroll {
+          0% { transform: translateY(0); opacity: 0; }
+          50% { opacity: 1; }
+          100% { transform: translateY(12px); opacity: 0; }
+        }
 
-                .animate-float-orb {
-                    animation: float-orb 20s ease-in-out infinite;
-                }
-                
-                .animate-float-orb-delayed {
-                    animation: float-orb-delayed 25s ease-in-out infinite;
-                }
+        .animate-float-orb {
+          animation: float-orb 20s ease-in-out infinite;
+        }
+        
+        .animate-float-orb-delayed {
+          animation: float-orb-delayed 25s ease-in-out infinite;
+        }
 
-                .animate-float-slow {
-                    animation: float-slow 6s ease-in-out infinite;
-                }
+        .animate-float-slow {
+          animation: float-slow 6s ease-in-out infinite;
+        }
 
-                .animate-float-medium {
-                    animation: float-medium 4s ease-in-out infinite;
-                }
+        .animate-float-medium {
+          animation: float-medium 4s ease-in-out infinite;
+        }
 
-                .animate-shimmer {
-                    background-size: 200% 100%;
-                    animation: shimmer 2s infinite linear;
-                }
+        .animate-shimmer {
+          background-size: 200% 100%;
+          animation: shimmer 2s infinite linear;
+        }
 
-                .animate-shine {
-                    animation: shine 3s ease-in-out infinite;
-                }
+        .animate-shine {
+          animation: shine 3s ease-in-out infinite;
+        }
 
-                .animate-fade-in-up {
-                    animation: fade-in-up 0.8s ease-out forwards;
-                    opacity: 0;
-                }
+        .animate-fade-in-up {
+          animation: fade-in-up 0.8s ease-out forwards;
+          opacity: 0;
+        }
 
-                .animate-gradient-x {
-                    background-size: 200% 200%;
-                    animation: gradient-x 3s ease infinite;
-                }
+        .animate-gradient-x {
+          background-size: 200% 200%;
+          animation: gradient-x 3s ease infinite;
+        }
 
-                .animate-scroll {
-                    animation: scroll 2s ease-in-out infinite;
-                }
+        .animate-scroll {
+          animation: scroll 2s ease-in-out infinite;
+        }
 
-                .perspective-1000 {
-                    perspective: 1000px;
-                }
+        .perspective-1000 {
+          perspective: 1000px;
+        }
 
-                .rotate-y-2:hover {
-                    transform: rotateY(2deg);
-                }
+        .rotate-y-2:hover {
+          transform: rotateY(2deg);
+        }
 
-                @media (prefers-reduced-motion: reduce) {
-                    *, *::before, *::after {
-                        animation-duration: 0.01ms !important;
-                        animation-iteration-count: 1 !important;
-                        transition-duration: 0.01ms !important;
-                    }
-                }
-            `}</style>
+        @media (prefers-reduced-motion: reduce) {
+          *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+          }
+        }
+      `}</style>
     </>
   );
 }

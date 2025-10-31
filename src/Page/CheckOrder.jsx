@@ -14,6 +14,7 @@ import {
   Download,
 } from "lucide-react";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 export default function CheckOrderPage() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -551,6 +552,7 @@ export default function CheckOrderPage() {
           </div>
         </div>
       </div>
+      <Footer />
 
       <style>{`
         @keyframes fade-in {

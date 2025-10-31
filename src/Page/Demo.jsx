@@ -14,6 +14,7 @@ import {
   Package,
 } from "lucide-react";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 export default function DemoPage() {
   const [step, setStep] = useState(1);
@@ -108,13 +109,28 @@ export default function DemoPage() {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-black text-gray-900 mb-2">
-            Renderchitect
-          </h1>
-          <p className="text-gray-600">
-            Convert SketchUp to VR APK or Desktop EXE
-          </p>
+        <div className="text-center mb-12">
+          <div className="flex flex-col items-center">
+            <img
+              src="LogoMrechilirisasi.png"
+              alt="Renderchitect Logo"
+              className="w-48 h-48 drop-shadow-md object-contain object-center"
+            />
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-3">
+              Renderchitect
+            </h1>
+            <p className="text-gray-600 text-base sm:text-lg max-w-md mx-auto">
+              Convert your{" "}
+              <span className="font-medium text-gray-800">SketchUp</span>{" "}
+              projects into immersive
+              <span className="font-semibold text-blue-600"> VR APK</span> or
+              <span className="font-semibold text-indigo-600">
+                {" "}
+                Desktop EXE
+              </span>{" "}
+              experiences.
+            </p>
+          </div>
         </div>
 
         {step <= 3 && (
@@ -575,6 +591,7 @@ export default function DemoPage() {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   );
 }

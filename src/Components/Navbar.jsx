@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Home, Play, Package, Sparkles, Menu, X } from "lucide-react";
-// import HouseRenderchitect from "../assets/icon/HouseRenderchitect.png";
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -10,13 +9,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="/" className="flex items-center space-x-3 group">
-            {/* <div className="relative group">
+            <div className="relative group">
               <img
-                src={HouseRenderchitect}
+                src="HouseRenderchitect.png"
                 alt="Logo"
                 className="w-11 h-11 object-contain transform group-hover:scale-110 transition-transform"
               />
-            </div> */}
+            </div>
             <div>
               <span className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
                 Render
