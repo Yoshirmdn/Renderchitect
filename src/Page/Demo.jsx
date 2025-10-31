@@ -386,7 +386,7 @@ export default function DemoPage() {
                         {selectedFormat === "exe"
                           ? "1-2 hours"
                           : selectedFormat === "apk"
-                          ? "3-4 days"
+                          ? "2 Weeks"
                           : "-"}
                       </span>
                     </div>
