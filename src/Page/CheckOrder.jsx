@@ -45,7 +45,7 @@ export default function CheckOrderPage() {
       price: "Rp 5.400.000",
       invoiceNo: "INV-1729960960-7029",
       status: "success",
-      ffileUrl: "/assets/app/Pujasera.apk",
+      fileUrl: "/assets/app/Pujasera.apk",
     },
     {
       date: "26-10-2025 21:42:31",
@@ -61,7 +61,7 @@ export default function CheckOrderPage() {
       price: "Rp 4.500.000",
       invoiceNo: "INV-1729960851-PEVZ",
       status: "success",
-      ffileUrl: "/assets/app/Pujasera.apk",
+      fileUrl: "/assets/app/Pujasera.apk",
     },
     {
       date: "26-10-2025 21:38:27",
@@ -77,7 +77,7 @@ export default function CheckOrderPage() {
       price: "Rp 4.995.000",
       invoiceNo: "INV-1729960851-R8XT",
       status: "success",
-      ffileUrl: "/assets/app/Pujasera.apk",
+      fileUrl: "/assets/app/Pujasera.apk",
     },
     {
       date: "26-10-2025 21:37:04",
@@ -93,7 +93,7 @@ export default function CheckOrderPage() {
       price: "Rp 5.733.000",
       invoiceNo: "INV-1729960851-LSRJ",
       status: "success",
-      ffileUrl: "/assets/app/Pujasera.apk",
+      fileUrl: "/assets/app/Pujasera.apk",
     },
     {
       date: "26-10-2025 21:32:28",
@@ -120,21 +120,21 @@ export default function CheckOrderPage() {
     }, 1000);
   };
 
-  const handleDownload = (fileUrl, invoiceNo, category) => {
-    if (!fileUrl) return;
-
-    // Create a temporary link element
-    const link = document.createElement("a");
-    link.href = fileUrl;
-
-    // Extract file extension from category
-    const extension = category.includes("VR") ? "apk" : "exe";
-    const fileName = `Pujasera_${invoiceNo.slice(-4)}.${extension}`;
-
-    link.download = fileName;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleDownload = async (fileUrl, invoiceNo, category) => {
+    try {
+      const response = await fetch(fileUrl);
+      const blob = await response.blob();
+      const link = document.createElement("a");
+      const extension = category.includes("VR") ? "apk" : "exe";
+      const fileName = `Pujasera_${invoiceNo.slice(-4)}.${extension}`;
+      link.href = window.URL.createObjectURL(blob);
+      link.download = fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error("Failed to download file:", error);
+    }
   };
 
   const getStatusBadge = (status) => {
