@@ -27,7 +27,7 @@ export default function CheckOrderPage() {
       date: "26-10-2025 22:04:47",
       category: "VR APK Conversion",
       price: "Rp 4.500.000",
-      invoiceNo: "INV76********VR4N",
+      invoiceNo: "INV-1729962287-VR4N",
       status: "pending",
       fileUrl: null,
     },
@@ -35,7 +35,7 @@ export default function CheckOrderPage() {
       date: "26-10-2025 21:44:50",
       category: "Desktop EXE Conversion",
       price: "Rp 3.900.000",
-      invoiceNo: "INV-17******-7028",
+      invoiceNo: "INV-1729961090-7028",
       status: "success",
       fileUrl: "/assets/app/Pujasera.exe",
     },
@@ -43,15 +43,15 @@ export default function CheckOrderPage() {
       date: "26-10-2025 21:42:40",
       category: "VR APK Conversion",
       price: "Rp 5.400.000",
-      invoiceNo: "INV-17******-7029",
+      invoiceNo: "INV-1729960960-7029",
       status: "success",
-      fileUrl: "/assets/app/Pujasera.apk",
+      ffileUrl: "/assets/app/Pujasera.apk",
     },
     {
       date: "26-10-2025 21:42:31",
       category: "Desktop EXE Conversion",
       price: "Rp 4.560.000",
-      invoiceNo: "INV76********9XCC",
+      invoiceNo: "INV-1729960951-9XCC",
       status: "success",
       fileUrl: "/assets/app/Pujasera.exe",
     },
@@ -59,15 +59,15 @@ export default function CheckOrderPage() {
       date: "26-10-2025 21:40:51",
       category: "VR APK Conversion",
       price: "Rp 4.500.000",
-      invoiceNo: "INV76********PEVZ",
+      invoiceNo: "INV-1729960851-PEVZ",
       status: "success",
-      fileUrl: "/assets/app/Pujasera.apk",
+      ffileUrl: "/assets/app/Pujasera.apk",
     },
     {
       date: "26-10-2025 21:38:27",
       category: "Desktop EXE Conversion",
       price: "Rp 6.080.000",
-      invoiceNo: "INV76********3N62",
+      invoiceNo: "INV-1729960951-3N62",
       status: "success",
       fileUrl: "/assets/app/Pujasera.exe",
     },
@@ -75,15 +75,15 @@ export default function CheckOrderPage() {
       date: "26-10-2025 21:38:00",
       category: "VR APK Conversion",
       price: "Rp 4.995.000",
-      invoiceNo: "INV76********R8XT",
+      invoiceNo: "INV-1729960851-R8XT",
       status: "success",
-      fileUrl: "/assets/app/Pujasera.apk",
+      ffileUrl: "/assets/app/Pujasera.apk",
     },
     {
       date: "26-10-2025 21:37:04",
       category: "Desktop EXE Conversion",
       price: "Rp 3.900.000",
-      invoiceNo: "INV76********GY52",
+      invoiceNo: "INV-1729960851-GY52",
       status: "success",
       fileUrl: "/assets/app/Pujasera.exe",
     },
@@ -91,15 +91,15 @@ export default function CheckOrderPage() {
       date: "26-10-2025 21:32:54",
       category: "VR APK Conversion",
       price: "Rp 5.733.000",
-      invoiceNo: "INV76********LSRJ",
+      invoiceNo: "INV-1729960851-LSRJ",
       status: "success",
-      fileUrl: "/assets/app/Pujasera.apk",
+      ffileUrl: "/assets/app/Pujasera.apk",
     },
     {
       date: "26-10-2025 21:32:28",
       category: "Desktop EXE Conversion",
       price: "Rp 4.750.000",
-      invoiceNo: "INV76********UCCT",
+      invoiceNo: "INV-1729960851-UCCT",
       status: "pending",
       fileUrl: null,
     },
@@ -536,7 +536,8 @@ export default function CheckOrderPage() {
                           </td>
                           <td className="px-6 py-5">
                             <code className="text-xs text-gray-600 bg-gray-100 px-3 py-1.5 rounded-lg font-mono">
-                              {transaction.invoiceNo}
+                              {transaction.invoiceNo.slice(0, 5)}********
+                              {transaction.invoiceNo.slice(-4)}
                             </code>
                           </td>
                           <td className="px-6 py-5">
