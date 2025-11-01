@@ -109,14 +109,13 @@ export default function DemoPage() {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-12">
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            {/* Text Content - Left Side */}
+        <div className="mb-6">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
             <div className="flex-1 text-center md:text-left">
-              <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-3">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-2">
                 Renderchitect
               </h1>
-              <p className="text-gray-600 text-base sm:text-lg max-w-md mx-auto md:mx-0">
+              <p className="text-gray-600 text-sm sm:text-base leading-snug max-w-md mx-auto md:mx-0">
                 Convert your{" "}
                 <span className="font-medium text-gray-800">SketchUp</span>{" "}
                 projects into immersive
@@ -134,7 +133,7 @@ export default function DemoPage() {
               <img
                 src="LogoMrechilirisasi.png"
                 alt="Renderchitect Logo"
-                className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 drop-shadow-md object-contain"
+                className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 drop-shadow-md object-contain"
               />
             </div>
           </div>
