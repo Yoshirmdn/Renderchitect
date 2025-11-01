@@ -108,28 +108,35 @@ export default function DemoPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="text-center mb-12">
-          <div className="flex flex-col items-center">
-            <img
-              src="LogoMrechilirisasi.png"
-              alt="Renderchitect Logo"
-              className="w-48 h-48 drop-shadow-md object-contain object-center"
-            />
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-3">
-              Renderchitect
-            </h1>
-            <p className="text-gray-600 text-base sm:text-lg max-w-md mx-auto">
-              Convert your{" "}
-              <span className="font-medium text-gray-800">SketchUp</span>{" "}
-              projects into immersive
-              <span className="font-semibold text-blue-600"> VR APK</span> or
-              <span className="font-semibold text-indigo-600">
-                {" "}
-                Desktop EXE
-              </span>{" "}
-              experiences.
-            </p>
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="mb-12">
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            {/* Text Content - Left Side */}
+            <div className="flex-1 text-center md:text-left">
+              <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-3">
+                Renderchitect
+              </h1>
+              <p className="text-gray-600 text-base sm:text-lg max-w-md mx-auto md:mx-0">
+                Convert your{" "}
+                <span className="font-medium text-gray-800">SketchUp</span>{" "}
+                projects into immersive
+                <span className="font-semibold text-blue-600"> VR APK</span> or
+                <span className="font-semibold text-indigo-600">
+                  {" "}
+                  Desktop EXE
+                </span>{" "}
+                experiences.
+              </p>
+            </div>
+
+            {/* Logo - Right Side */}
+            <div className="flex-shrink-0">
+              <img
+                src="LogoMrechilirisasi.png"
+                alt="Renderchitect Logo"
+                className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 drop-shadow-md object-contain"
+              />
+            </div>
           </div>
         </div>
 
